@@ -14,7 +14,7 @@ RUN apt-get update
 RUN apt-get install -y gfortran
 RUN curl -s -L http://www.netlib.org/lapack/lapack-3.7.1.tgz > lapack-3.7.1.tgz
 RUN curl -s -L https://downloads.sourceforge.net/project/math-atlas/Stable/3.10.3/atlas3.10.3.tar.bz2 > /app/.heroku/atlas3.10.3.tar.bz2
-RUN bunzip2 -c atlas3.10.3.tar.bz2 | tar xfm -
+RUN tar -xjf atlas3.10.3.tar.bz2
 RUN mkdir /app/.heroku/ATLAS/Linux_C2D64SSE3
 WORKDIR /app/.heroku/ATLAS/Linux_C2D64SSE3
 RUN ../configure -b 64 -D c -DPentiumCPS=2400 \
