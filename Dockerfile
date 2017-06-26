@@ -10,6 +10,7 @@ ENV LD_LIBRARY_PATH /app/.heroku/vendor/lib/
 
 # Install ATLAS with LAPACK and BLAS
 WORKDIR /app/.heroku
+CMD echo "update and install gfortran"
 RUN apt-get update
 RUN apt-get install -y gfortran
 RUN curl -s -L http://www.netlib.org/lapack/lapack-3.7.1.tgz > lapack-3.7.1.tgz
