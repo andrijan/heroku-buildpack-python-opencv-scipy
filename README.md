@@ -1,4 +1,4 @@
-# Heroku cedar14 stack buildpack with Python, OpenCV, Numpy, SciPy and Matplotlib
+# Heroku heroku-16 stack buildpack with Python, OpenCV, Numpy, SciPy and Matplotlib
 
 ## What
 This buildpack provides a self-contained environment for python applications that need:
@@ -11,7 +11,7 @@ OpenCV, Numpy or Scipy.
 - Compiling things in a one-off dyno is slow.
 
 ## How
-A complete environment was created using the Dockerfile file based on the heroku cedar stack v14.
+A complete environment was created using the Dockerfile file based on the heroku-16 stack.
 
 This buildpack will download that environment and place it in your /app/.heroku folder.
 This includes the following:
