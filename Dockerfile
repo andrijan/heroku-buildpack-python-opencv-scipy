@@ -22,10 +22,10 @@ RUN apt install -y python-minimal python-pip python-setuptools python-opencv
 RUN apt install -y libblas-dev liblapack-dev 
 
 # Install zbar (QR code scanner)
-sudo apt install -y libzbar0 libzbar-dev
+RUN apt install -y libzbar0 libzbar-dev
 
 # Install opencv and xpdf tools
-sudo apt install -y xpdf opencv*
+RUN apt install -y xpdf opencv*
 
 # Update pip 
 RUN python -m pip install --upgrade pip
@@ -38,7 +38,6 @@ RUN pip install --user zbar-py imutils PyPDF2
 
 # Install Matplotlib
 RUN pip install --user matplotlib
-
 
 # Create vendor package
 WORKDIR /app/
